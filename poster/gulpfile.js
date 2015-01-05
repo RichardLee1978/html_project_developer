@@ -58,8 +58,9 @@ gulp.task('css',function(){
    
 });
 gulp.task('less',function(){
-  gulp.src(['css/*.less'])
+  gulp.src(['css/reset.less','css/*.less'])
   .pipe(less())
+  .pipe(concat('mobile.css'))
   .pipe(minifycss())
   .pipe(gulp.dest(css_files_url));
    
