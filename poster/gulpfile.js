@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),//css压缩配置
  haml=require('gulp-haml');//haml压缩配置
  minifyhtml=require('gulp-minify-html');//html压缩配置
-  prettify = require('gulp-html-prettify');
+  prettify = require('gulp-html-prettify');//html结构优化
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),//js压缩配置
     imagemin = require('gulp-imagemin'),//图片压缩配置
@@ -26,7 +26,7 @@ gulp.task('default',function(){
 gulp.task('html',function(){
 
    gulp.src(['*.html'])
-   .pipe(minifyhtml())
+   .pipe(prettify())
    .pipe(gulp.dest(html_files_url));
 });
 gulp.task('haml',function(){
