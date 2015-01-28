@@ -15,10 +15,10 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     del = require('del');
 	
-var html_files_url="F:/html_project_release/mhaibao/static";	
-var css_files_url="F:/html_project_release/mhaibao/static/css/";
-var img_files_url="F:/html_project_release/mhaibao/static/images/";		
-var js_files_url="F:/html_project_release/mhaibao/static/scripts/";	
+var html_files_url="/Users/lirui/project/private/mhaibao/rel/static";	
+var css_files_url="/Users/lirui/project/private/mhaibao/rel/static/css/";
+var img_files_url="/Users/lirui/project/private/mhaibao/rel/static/images/";		
+var js_files_url="/Users/lirui/project/private/mhaibao/rel/static/scripts/";	
 
 gulp.task('default',function(){
     gulp.run('html','haml','minjs','js', 'less','css','img');
